@@ -1,23 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+  <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+      <div class="col-md-10 col-md-offset-1">
+        <painel titulo="Dashboard">
+          Conteudo Painel
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+          <div class="row">
+            <div class="col-md-4">
+              <painel titulo="conteudo 1">Lorem Ipsum 1</painel>
             </div>
-        </div>
+            <div class="col-md-4">
+              <painel titulo="conteudo 1">Lorem Ipsum 2</painel>
+            </div>
+            <div class="col-md-4">
+              <painel titulo="conteudo 1">Lorem Ipsum 3</painel>
+            </div>
+          </div>
+
+        </painel>
+      </div>
     </div>
-</div>
+  </div>
+
 @endsection
