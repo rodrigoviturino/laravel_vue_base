@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a href="#" class="btn btn-primary">Criar</a>
+    <a v-if="criar" v-bind:href="criar" class="btn btn-primary">Criar</a>
 
     <table class="table table-hover">
       <thead>
@@ -14,8 +14,17 @@
         <tr v-for="item in itens">
           <td v-for="i in item">{{ i }}</td>
           <td>
-            <a href="#">Editar</a> |
-            <a href="#">Deletar</a>
+            <a v-if="detalhe" v-bind:href="editar" class="btn btn-warning"
+              >Detalhe |</a
+            >
+
+            <a v-if="editar" v-bind:href="editar" class="btn btn-success"
+              >Editar |</a
+            >
+
+            <a v-if="deletar" v-bind:href="deletar" class="btn btn-danger"
+              >Deletar</a
+            >
           </td>
         </tr>
       </tbody>
@@ -25,6 +34,6 @@
 
 <script>
 export default {
-  props: ["titulos", "itens"],
+  props: ["titulos", "itens", "criar", "detalhe", "editar", "deletar", "token"],
 };
 </script>
