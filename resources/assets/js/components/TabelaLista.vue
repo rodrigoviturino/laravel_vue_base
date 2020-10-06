@@ -1,0 +1,30 @@
+<template>
+  <div>
+    <a href="#" class="btn btn-primary">Criar</a>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th v-for="titulo in titulos">{{ titulo }}</th>
+
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in itens">
+          <td v-for="i in item">{{ i }}</td>
+          <td>
+            <a href="#">Editar</a> |
+            <a href="#">Deletar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["titulos", "itens"],
+};
+</script>

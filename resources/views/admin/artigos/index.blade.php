@@ -2,21 +2,11 @@
 
 @section('content')
 
-  <pagina tamanho="8">
-    <painel titulo="Dashboard">
-      Conteudo Painel
-
-      <div class="row">
-        <div class="col-md-4">
-          <caixa qtd="22" titulo="Artigos" url="#teste" cor="gray" icone="ion ion-person-add"></caixa>
-        </div>
-        <div class="col-md-4">
-          <caixa qtd="80" titulo="Games" url="#" cor="purple" icone="ion-ios-game-controller-b-outline"></caixa>
-        </div>
-        <div class="col-md-4">
-          <caixa qtd="268" titulo="Posts" url="#" cor="blue" icone="ion-pound"></caixa>
-        </div>
-      </div>
+  <pagina tamanho="12">
+    <painel titulo="Lista de Artigos">
+     
+      <tabela-lista 
+      v-bind:titulos="['#', 'Titulo', 'Descrição']" v-bind:itens="[[1, 'PHP OO','Curso de PHP Completo'], [2,'VUE', 'Curso de VUE.js']]"></tabela-lista>
 
     </painel>
   </pagina>
